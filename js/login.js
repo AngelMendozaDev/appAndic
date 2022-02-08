@@ -7,7 +7,7 @@ function logIn() {
             //console.log(response);
             response = response.trim();
             if (response == 1)
-                location.href = "menu.php";
+                location.href = "main.php";
             else if (response == 2)
                 swal("Usuario/Contraseña Incorrectos", "ANDIC A.C. 2022", "error");
             else if (response == 3)
