@@ -4,8 +4,9 @@
 <!-- Menu Superior -->
 <div class="nav-cont">
     <div class="name-cont">
-        <input type="checkbox" id="menu-status">
-        <label class="name-us" for="menu-status">
+        <input type="checkbox" id="menu-status" hidden>
+        <label for="menu-status"></label>
+        <label class="name-us">
             <i class="fa fa-user-circle" aria-hidden="true"></i>
             <?php echo $_SESSION['NameUs']  ?>
         </label>
@@ -27,56 +28,89 @@
 
 
 <!--Menú principal -->
-<div class="menu-box">
+<div class="menu-box" id="my-menu">
+    <label class="exit-btn" for="menu-status">
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
+    </label>
     <div class="menu-head">
         <div class="menu-img">
             <img src="media/pictures/<?php echo $_SESSION['ID'] ?>.png" alt="">
         </div>
+        <br>
         <h6 class="name-menu"><?php echo $_SESSION['NameUs']  ?></h6>
     </div>
     <hr>
     <div class="menu-body">
-        <div class="accordion" id="accordionExample">
+        <div class="accordion" id="accordeon">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Accordion Item #1
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        &nbsp;
+                        Personal y comunidad
                     </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordeon">
                     <div class="accordion-body">
-                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <ul class="sub-menu">
+                            <li class="sub-menu-item">
+                                <a href="">
+                                    <i class="fas fa-user-tie item-icon"></i>
+                                    &nbsp; Agregar
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         Accordion Item #2
                     </button>
                 </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordeon">
                     <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <ul class="sub-menu">
+                            <li class="sub-menu-item">
+                                <a href="">
+                                    <i class="fa fa-optin-monster" aria-hidden="true"></i>
+                                    optionX
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Accordion Item #3
                     </button>
                 </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordeon">
                     <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <ul class="sub-menu">
+                            <li class="sub-menu-item">
+                                <a href="">
+                                    <i class="fa fa-optin-monster" aria-hidden="true"></i>
+                                    optionX
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
         <!-- Fin accordeon -->
 
-        
+
     </div>
     <hr style="margin: auto; width: 50%;">
     <div class="menu-foot">
