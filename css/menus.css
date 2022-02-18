@@ -82,7 +82,7 @@ body::before {
     transition: all 0.5s;
 }
 
-.nav-option:hover a{
+.nav-option:hover a {
     text-decoration: underline;
     color: #ffff;
     font-weight: 700;
@@ -94,7 +94,7 @@ body::before {
 *** MENU LATERAL*************
 ------------------------------*/
 
-.icon-menu{
+.icon-menu {
     font-size: 25px;
     cursor: pointer;
     margin-right: 20px;
@@ -202,8 +202,10 @@ body::before {
     margin-top: 10px;
 }
 
+
 /* Contenedores */
-.cont-g{
+
+.cont-g {
     margin: auto;
     margin-top: 50px;
     /* background-color: #104c71; */
@@ -225,8 +227,8 @@ body::before {
     .option-cont {
         width: 100%;
     }
-    .cont-g{
+    .cont-g {
         width: 95%;
-        margin-top: 100px;
+        margin-top: 120px;
     }
 }

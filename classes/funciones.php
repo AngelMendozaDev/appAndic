@@ -1,4 +1,7 @@
 <?php
+
+use LDAP\Result;
+
     require_once "config.php";
     
 class funciones extends config{
@@ -25,5 +28,32 @@ class funciones extends config{
 
         return 2;
     }
+
+    //Modelo para Vista de comunidad
+    public function getAllPerson(){
+        $conexion = config::conexion();
+        
+        if($conexion == false)
+            return "err";
+
+        $query = $conexion->prepare("SELECT id_p, nombre, app, apm FROM persona");
+        $query->execute();
+        $result = $query->get_result();
+
+        $query->close();
+
+        while($data = $result->fetch_assoc()){
+            $json[] = array(
+                "id" => $data['id_p'],
+                "app" => $data['app'],
+                "apm" => $data['apm'],
+                "name" => $data['nombre']
+            );
+        }
+
+        return json_encode($json);
+    }
+
+
 }
 ?>

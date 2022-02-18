@@ -1,12 +1,13 @@
 <?php require_once "head.php"; ?>
+<link rel="stylesheet" href="css/comunity.css">
 
 <div class="cont-g">
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+    <button type="button" class="btn btn-primary my-btn" data-bs-toggle="modal" data-bs-target="#registerModal">
         <i class="fas fa-user-plus "></i> Agregar Persona
     </button>
 
-    <div class="filter-box">
+    <div class="filter-box mt-3 mb-3">
         <select id="filtro-tipo" class="form-select">
             <option value="0" selected="true">Selecciona una opcion...</option>
             <option value="a">x</option>
@@ -14,6 +15,47 @@
             <option value="">xxx</option>
             <option value="">xxxx</option>
         </select>
+    </div>
+
+
+    <div class="cont-table">
+        <table id="tabla-comunity" class="table table-hover table-bordered table-striped table-responsive">
+            <thead class="table-primary text-center">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody class="table-success" id="tab-body">
+                <tr>
+                    <td>data_1</td>
+                    <td>data_2</td>
+                    <td>data_3</td>
+                    <td>data_4</td>
+                </tr>
+                <tr>
+                    <td>data_1</td>
+                    <td>data_2</td>
+                    <td>data_3</td>
+                    <td>data_4</td>
+                </tr>
+                <tr>
+                    <td>data_1</td>
+                    <td>data_2</td>
+                    <td>data_3</td>
+                    <td>data_4</td>
+                </tr>
+                <tr>
+                    <td>data_1</td>
+                    <td>data_2</td>
+                    <td>data_3</td>
+                    <td>data_4</td>
+                </tr>
+
+            </tbody>
+        </table>
     </div>
 
 </div>
@@ -39,3 +81,6 @@
 </div>
 
 <?php require_once "foot.php"; ?>
+<script src="lib/datatable/js/jquery.dataTables.min.js"></script>
+<script src="lib/datatable/js/dataTables.bootstrap5.min.js"></script>
+<script src="js/comunity.js"></script>
