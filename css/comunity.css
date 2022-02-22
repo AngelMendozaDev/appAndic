@@ -10,6 +10,29 @@
     cursor: pointer;
 }
 
+.infoButton{
+    position: relative;
+}
+
+.infoButton:hover .msg-pop{
+    opacity: 1;
+    left: -100px;
+    transition: all 0.5s;
+}
+
+.msg-pop{
+    opacity: 0;
+    border-radius: 10px;
+    position: absolute;
+    background-color: rgba(0,0,0, 0.5);
+    color: #fff;
+    font-size: 10px;
+    width: 100px;
+    top: -5px;
+    left: 0px;
+    transition: all 0.5s;
+}
+
 @media(max-width:600px) {
     .cont-table {
         overflow-x: scroll;

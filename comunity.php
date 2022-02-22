@@ -22,38 +22,14 @@
         <table id="tabla-comunity" class="table table-hover table-bordered table-striped table-responsive">
             <thead class="table-primary text-center">
                 <tr>
-                    <th>Nombre</th>
                     <th>Apellido Paterno</th>
                     <th>Apellido Materno</th>
+                    <th>Nombre</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody class="table-success" id="tab-body">
-                <tr>
-                    <td>data_1</td>
-                    <td>data_2</td>
-                    <td>data_3</td>
-                    <td>data_4</td>
-                </tr>
-                <tr>
-                    <td>data_1</td>
-                    <td>data_2</td>
-                    <td>data_3</td>
-                    <td>data_4</td>
-                </tr>
-                <tr>
-                    <td>data_1</td>
-                    <td>data_2</td>
-                    <td>data_3</td>
-                    <td>data_4</td>
-                </tr>
-                <tr>
-                    <td>data_1</td>
-                    <td>data_2</td>
-                    <td>data_3</td>
-                    <td>data_4</td>
-                </tr>
-
+                <?php require_once "getComunity.php" ?>
             </tbody>
         </table>
     </div>

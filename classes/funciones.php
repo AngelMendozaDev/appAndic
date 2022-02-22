@@ -36,22 +36,13 @@ class funciones extends config{
         if($conexion == false)
             return "err";
 
-        $query = $conexion->prepare("SELECT id_p, nombre, app, apm FROM persona");
+        $query = $conexion->prepare("SELECT id_p, nombre, app, apm FROM persona ORDER BY app, apm ASC");
         $query->execute();
         $result = $query->get_result();
 
         $query->close();
 
-        while($data = $result->fetch_assoc()){
-            $json[] = array(
-                "id" => $data['id_p'],
-                "app" => $data['app'],
-                "apm" => $data['apm'],
-                "name" => $data['nombre']
-            );
-        }
-
-        return json_encode($json);
+        return $result;
     }
 
 
